@@ -19,6 +19,10 @@ cmake ../
 make
 sudo make install
 ```
+* libmsgpack-dev
+```bash
+sudo apt install libmsgpack-dev
+```
 
 ### Build
 ```bash
