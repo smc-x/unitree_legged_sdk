@@ -39,7 +39,7 @@ void Lcm_Server_Low::LCMRecv()
         mylcm.lowCmdLCMHandler.counter++;
         if(mylcm.lowCmdLCMHandler.counter > 10){
             printf("Error! LCM Time out.\n");
-            exit(-1);              // can be commented out
+            // exit(-1);              // can be commented out
         }
         pthread_mutex_unlock(&mylcm.lowCmdLCMHandler.countMut);
     }
@@ -84,7 +84,7 @@ void Lcm_Server_High::LCMRecv()
         mylcm.highCmdLCMHandler.counter++;
         if(mylcm.highCmdLCMHandler.counter > 10){
             printf("Error! LCM Time out.\n");
-            exit(-1);              // can be commented out
+            // exit(-1);              // can be commented out
         }
         pthread_mutex_unlock(&mylcm.highCmdLCMHandler.countMut);
     }
