@@ -7,7 +7,7 @@ link_directories(lib)
 
 add_compile_options(-std=c++11)
 
-set(EXTRA_LIBS -pthread libunitree_legged_sdk_amd64.so lcm)
+set(EXTRA_LIBS -pthread libunitree_legged_sdk_arm64.so lcm zmq)
 
 set(CMAKE_CXX_FLAGS "-O3")
 
@@ -37,3 +37,7 @@ target_link_libraries(udp_recv_test ${EXTRA_LIBS})
 # lcm server
 add_executable(lcm_server examples/lcm_server.cpp)
 target_link_libraries(lcm_server ${EXTRA_LIBS})
+
+# zmq
+add_executable(zmq_walk examples/zmq_walk.cpp)
+target_link_libraries(zmq_walk ${EXTRA_LIBS})
